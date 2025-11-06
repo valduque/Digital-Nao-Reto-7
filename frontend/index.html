@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>BookingMx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <h1>BookingMx</h1>
+    <p>Nearby cities graph & simple reservations demo</p>
+  </header>
+
+  <main class="grid">
+    <section>
+      <h2>Nearby Cities Graph</h2>
+      <form id="graph-form">
+        <label>
+          Destination:
+          <input id="destination" type="text" placeholder="e.g., Guadalajara" required />
+        </label>
+        <label>
+          Max Distance (km):
+          <input id="maxDistance" type="number" min="0" step="1" value="250" />
+        </label>
+        <button type="submit">Find Nearby</button>
+      </form>
+
+      <div id="graph-output" class="card">
+        <h3>Results</h3>
+        <ul id="nearby-list"></ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Reservations</h2>
+      <form id="reservation-form">
+        <label>
+          Guest Name:
+          <input id="guestName" required />
+        </label>
+        <label>
+          Hotel Name:
+          <input id="hotelName" required />
+        </label>
+        <label>
+          Check-in:
+          <input id="checkIn" type="date" required />
+        </label>
+        <label>
+          Check-out:
+          <input id="checkOut" type="date" required />
+        </label>
+        <button type="submit">Create Reservation</button>
+      </form>
+
+      <div class="card">
+        <h3>All Reservations</h3>
+        <button id="refresh">Refresh</button>
+        <ul id="reservation-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© BookingMx</small>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

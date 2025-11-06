@@ -1,3 +1,4 @@
+
 # BookingMx - Testing & Documentation Implementation
 📋 Project Overview
 This repository contains the implementation of comprehensive testing and documentation standards for the BookingMx platform, focusing on two key modules:
@@ -87,3 +88,22 @@ All tests must pass before merging
 Minimum 90% code coverage required
 At least 1 code review approval required
 No direct commits to main branch
+=======
+# BookingMx
+
+Minimal vanilla JS + Spring Boot project to practice unit tests.
+
+## Run backend
+```bash
+cd backend
+mvn spring-boot:run
+```
+
+## Run frontend
+```bash
+cd frontend
+npm i
+npm run serve
+# http://localhost:5173
+```
+
