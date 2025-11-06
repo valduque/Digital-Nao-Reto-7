@@ -106,4 +106,8 @@ npm i
 npm run serve
 # http://localhost:5173
 ```
+<<<<<<< HEAD
 
+=======
+# BookingMx
+>>>>>>> dea6d62 (first commit)
