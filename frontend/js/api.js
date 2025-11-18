@@ -1,7 +1,7 @@
 // Minimal API client for the backend reservations module.
 // Kept simple & modular so you can mock/fake it in Jest tests.
 
-const BASE_URL = "http://localhost:8080/api/reservations";
+const BASE_URL = "http://localhost:8081/api/reservations";
 
 export async function listReservations() {
   const res = await fetch(BASE_URL);

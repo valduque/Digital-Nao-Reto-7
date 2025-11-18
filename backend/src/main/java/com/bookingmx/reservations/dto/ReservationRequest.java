@@ -15,6 +15,13 @@ public class ReservationRequest {
     @NotNull @Future
     private LocalDate checkOut;
 
+    public ReservationRequest(String guestName, String hotelName, LocalDate checkIn, LocalDate checkOut) {
+        this.guestName = guestName;
+        this.hotelName = hotelName;
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
+    }
+
     public String getGuestName() { return guestName; }
     public void setGuestName(String guestName) { this.guestName = guestName; }
     public String getHotelName() { return hotelName; }

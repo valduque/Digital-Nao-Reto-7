@@ -77,8 +77,7 @@ Reports Location: coverage-reports/
 Pipeline Stages
 
 Build - Compile and build the application
-Unit Tests - Run all unit tests
-Coverage Check - Verify 90% coverage threshold
+Unit Tests - Run all unit test Coverage Check - Verify 90% coverage threshold
 Code Quality - Static analysis and linting
 Deploy - Deploy to staging/production (on main branch)
 
@@ -88,26 +87,6 @@ All tests must pass before merging
 Minimum 90% code coverage required
 At least 1 code review approval required
 No direct commits to main branch
-=======
-# BookingMx
 
-Minimal vanilla JS + Spring Boot project to practice unit tests.
 
-## Run backend
-```bash
-cd backend
-mvn spring-boot:run
-```
 
-## Run frontend
-```bash
-cd frontend
-npm i
-npm run serve
-# http://localhost:5173
-```
-<<<<<<< HEAD
-
-=======
-# BookingMx
->>>>>>> dea6d62 (first commit)
