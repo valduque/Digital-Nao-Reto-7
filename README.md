@@ -1,92 +1,97 @@
+# 🚀 Full Challenge Overview – Frontend & Backend
 
-# BookingMx - Testing & Documentation Implementation
-📋 Project Overview
-This repository contains the implementation of comprehensive testing and documentation standards for the BookingMx platform, focusing on two key modules:
+## Executive Summary
 
-Nearby Cities Graph (JavaScript/React)
-Reservations Module (Java/Spring)
+This project consists of a full-stack application with a REST API backend and vanilla JavaScript frontend.
 
-Project Duration: November 6-14, 2025
-Team: Teresa (Front-end), Karen (Back-end/Testing Lead)
+---
 
-🎯 Objectives
+## 🧩 1. Backend Overview
 
-Implement unit testing for JavaScript and Java modules
-Achieve minimum 90% code coverage
-Establish automated CI/CD pipeline with quality gates
-Create comprehensive technical documentation
-Define development workflow with testing best practices
+The backend consists of a REST API designed to handle reservation logic and system operations.
 
-🚀 Getting Started
-Prerequisites
+### ✔️ Main Features
 
-Node.js >= 16.x
-npm >= 8.x
-Java >= 11
-Maven >= 3.6 or Gradle >= 7.x
-Git
+- Reservation CRUD operations
+- Centralized exception handling
+- Logging with Logback
+- Technical decision documentation
+- Structured and modular project
 
-Installation
-Frontend Setup
-bashcd frontend
-npm install
-npm test
-npm run test:coverage
-Backend Setup
-Using Maven:
-bashcd backend
-mvn clean install
-mvn test
-mvn jacoco:report
-Using Gradle:
-bashcd backend
-./gradlew build
-./gradlew test
-./gradlew jacocoTestReport
+### ⚙️ Tech Stack
 
-🧪 Testing
-Running Tests
-Frontend (Jest)
-bash# Run all tests
-npm test
+- Java 17
+- Maven
+- SparkJava
+- Gson
+- JUnit + Mockito
+- Jacoco (coverage)
 
-# Run tests in watch mode
-npm run test:watch
+---
 
-# Generate coverage report
-npm run test:coverage
+## 🎨 2. Frontend Overview
 
-# Run specific test file
-npm test NearbyCitiesGraph.test.js
-Backend (JUnit)
-bash# Maven
-mvn test
-mvn jacoco:report
+The frontend implements a simple interface to interact with the backend routes.
 
-# Gradle
-./gradlew test
-./gradlew jacocoTestReport
-Coverage Requirements
+### ✔️ Main Features
 
-Minimum Coverage: 90%
-Coverage Tools: Jest (Frontend), JaCoCo (Backend)
-Reports Location: coverage-reports/
+- API consumption with fetch()
+- Responsive page
+- Basic error handling
+- Simple component organization
 
+### 🛠️ Tech Stack
 
-📊 CI/CD Pipeline
-Pipeline Stages
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
 
-Build - Compile and build the application
-Unit Tests - Run all unit test Coverage Check - Verify 90% coverage threshold
-Code Quality - Static analysis and linting
-Deploy - Deploy to staging/production (on main branch)
+---
 
-Branch Protection Rules
+## 🔧 3. Technical Challenges
 
-All tests must pass before merging
-Minimum 90% code coverage required
-At least 1 code review approval required
-No direct commits to main branch
+### Backend
+
+- Implement REST routes correctly
+- Stable JSON serialization using Gson
+- Ensure testability with Mockito
+- Configure Jacoco with appropriate thresholds
+- Uniform HTTP error handling
+
+### Frontend
+
+- Design robust fetch clients
+- Synchronize backend response → UI
+- CORS and header handling
+- Structure a clean workflow without frameworks
+
+---
+
+## 📁 4. Repository Structure (Suggested)
+```
+/project
+ ├── backend/
+ │    ├── src/main/java
+ │    ├── src/test/java
+ │    ├── pom.xml
+ │    └── README.md
+ ├── frontend/
+ │    ├── index.html
+ │    ├── styles.css
+ │    ├── app.js
+ │    └── README.md
+ └── README.md (general)
+```
+
+---
+
+## 📌 5. Deliverables
+
+- Functional backend
+- Frontend consuming API
+- Technical documentation in Markdown
+- Complete test suite
+- Coverage report
 
 
 
