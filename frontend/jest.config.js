@@ -1,6 +1,13 @@
 export default {
-  testEnvironment: "node",
-  collectCoverage: true,
-  collectCoverageFrom: ["js/**/*.js"],
-  coverageReporters: ["text", "lcov"]
+  testEnvironment: "jsdom",
+
+  transform: {
+    "^.+\\.jsx?$": "babel-jest",
+  },
+
+  moduleFileExtensions: ["js", "jsx"],
+
+  setupFilesAfterEnv: ["<rootDir>/tests/setupTests.js"],
+
+  testMatch: ["**/tests/**/*.test.js"],
 };

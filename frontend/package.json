@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "serve": "npx http-server -c-1 -p 5173 .",
-    "test": "jest --coverage"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watchAll=false"
   },
   "devDependencies": {
-    "http-server": "^14.1.1",
-    "jest": "^29.7.0"
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "babel-jest": "^29.7.0",
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^30.2.0"
   }
 }

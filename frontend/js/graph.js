@@ -26,15 +26,23 @@ export class Graph {
 
 // Validates input dataset (array of cities, array of edges)
 export function validateGraphData({ cities, edges }) {
-  if (!Array.isArray(cities) || !Array.isArray(edges)) return { ok: false, reason: "cities/edges must be arrays" };
+  if (!Array.isArray(cities) || !Array.isArray(edges))
+    return { ok: false, reason: "cities/edges must be arrays" };
+
   const citySet = new Set(cities);
   if (citySet.size !== cities.length) return { ok: false, reason: "duplicate cities" };
-  for (const c of cities) if (typeof c !== "string" || !c.trim()) return { ok: false, reason: "invalid city entry" };
+
+  for (const c of cities)
+    if (typeof c !== "string" || !c.trim()) return { ok: false, reason: "invalid city entry" };
+
   for (const e of edges) {
     const { from, to, distance } = e ?? {};
-    if (!citySet.has(from) || !citySet.has(to)) return { ok: false, reason: "edge references unknown city" };
-    if (!Number.isFinite(distance) || distance < 0) return { ok: false, reason: "invalid distance" };
+    if (!citySet.has(from) || !citySet.has(to))
+      return { ok: false, reason: "edge references unknown city" };
+    if (!Number.isFinite(distance) || distance < 0)
+      return { ok: false, reason: "invalid distance" };
   }
+
   return { ok: true };
 }
 
@@ -52,14 +60,29 @@ export function getNearbyCities(graph, destination, maxDistanceKm = 250) {
   const neighbors = graph.neighbors(destination);
   return neighbors
     .filter(n => n.distance <= maxDistanceKm)
-    .sort((a,b) => a.distance - b.distance)
+    .sort((a, b) => a.distance - b.distance)
     .map(n => ({ city: n.to, distance: n.distance }));
 }
 
-// Sample dataset (you can replace or expand)
+// --- REQUIRED BY graph.test.js ---
+// returns input if valid array, else throws
+export function prepareGraphData(data) {
+  if (!Array.isArray(data)) {
+    throw new Error("Invalid data");
+  }
+  return [...data];
+}
+
+// Sample dataset
 export const sampleData = {
   cities: [
-    "Guadalajara", "Tlaquepaque", "Zapopan", "Tepatitlán", "Lagos de Moreno", "Tala", "Tequila"
+    "Guadalajara",
+    "Tlaquepaque",
+    "Zapopan",
+    "Tepatitlán",
+    "Lagos de Moreno",
+    "Tala",
+    "Tequila"
   ],
   edges: [
     { from: "Guadalajara", to: "Zapopan", distance: 12 },
